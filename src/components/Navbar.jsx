@@ -4,11 +4,11 @@ import React from 'react';
 const Navbar = () => {
   const links = (
     <>
-      <li><Link href="/">Home</Link></li>
-      <li><Link href="/packages">Packages</Link></li>
-      <li><Link href="/destinations">Destinations</Link></li>
-      <li><Link href="/about">About</Link></li>
-      <li><Link href="/contact">Contact</Link></li>
+      <li><Link className='text-black' href="/">Home</Link></li>
+      <li><Link className='text-black'  href="/packages">Packages</Link></li>
+      <li><Link className='text-black'  href="/destinations">Destinations</Link></li>
+      <li><Link className='text-black'  href="/about">About</Link></li>
+      <li><Link className='text-black'  href="/contact">Contact</Link></li>
     </>
   );
 
@@ -29,7 +29,7 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <Link href="/" className="btn btn-ghost text-xl">TravelGo</Link>
+        <Link href="/" className="btn btn-ghost  text-black text-xl">TravelGo</Link>
       </div>
 
       <div className="navbar-center hidden lg:flex">
@@ -40,7 +40,7 @@ const Navbar = () => {
 
       <div className="navbar-end">
        <Link href="/login" className="btn ">Login</Link>
-       <Link href="/register" className="btn ">Login</Link>
+       <Link href="/register" className="btn ">Register</Link>
       </div>
     </div>
   );

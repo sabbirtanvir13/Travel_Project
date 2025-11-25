@@ -19,7 +19,7 @@
 import Hero from "@/components/Hero";
 import FeaturedPackages from "@/components/FeaturedPackages";
 import Testimonials from "@/components/Testimonials";
-// import Features from "@/components/Features";
+import Features from "@/components/Features";
 // import CTA from "@/components/CTA";
 
 export default function Home() {
@@ -33,10 +33,11 @@ export default function Home() {
         <Testimonials />
       </div>
      
-      {/* <div className="mt-16">
+      <div className="mt-16">
         <Features />
       </div>
-      <div className="mt-16">
+
+      {/* <div className="mt-16">
         <CTA />
       </div>  */}
     </div>
