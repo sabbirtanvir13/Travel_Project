@@ -53,6 +53,7 @@
 // }
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function PackagesPage() {
@@ -145,9 +146,13 @@ export default function PackagesPage() {
                 {pkg.price}
               </p>
 
-              <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
-                View Details
-              </button>
+               {/* View Details Button */}
+     <Link
+        href={`/travel/${pkg._id}`}  // এখানে _id দিয়ে route বানানো হচ্ছে
+        className="btn btn-sm mt-2 bg-blue-500 hover:bg-blue-600 text-white"
+      >
+        View Details
+      </Link>
             </div>
           </div>
         ))}
