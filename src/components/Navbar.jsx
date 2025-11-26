@@ -74,6 +74,12 @@ const Navbar = () => {
           <li className="text-black">
             <Link href="/contact">Contact</Link>
           </li>
+          <li className="text-black">
+            <Link href="/addpackages">Add Packages</Link>
+          </li>
+          <li className="text-black">
+            <Link href="/mypackages">My Packages</Link>
+          </li>
         </ul>
       </div>
 
