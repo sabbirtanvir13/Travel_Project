@@ -197,7 +197,9 @@ export default function AddPackagesPage() {
           <input type="date" name="date" className="input input-bordered w-full text-black bg-white" />
           <input type="text" name="priority" placeholder="Priority (High/Medium/Low)" className="input input-bordered w-full text-black bg-white" />
           <textarea name="shortDescription" placeholder="Short Description" className="textarea textarea-bordered w-full text-black bg-white" required />
-          <input type="number" name="price" placeholder="Price" className="input input-bordered w-full text-black bg-white" />
+          
+        <label > $ <input type="number" name="price" placeholder="Price" className="input input-bordered w-full text-black bg-white" /></label>
+
           <input type="text" value={user?.displayName || ""} readOnly className="input input-bordered w-full text-black bg-gray-100" />
           <input type="email" value={user?.email || ""} readOnly className="input input-bordered w-full text-black bg-gray-100" />
           <button type="submit" className="btn btn-primary w-full bg-blue-600 text-white hover:bg-blue-700" disabled={loading}>

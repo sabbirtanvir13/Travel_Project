@@ -8,12 +8,12 @@ const trendingDestinations = [
   },
   {
     title: "Sajek Valley",
-    img: "https://images.unsplash.com/photo-1554948949-64b1e776c2f0?auto=format&fit=crop&w=1200&q=80",
+    img: "https://www.travelmate.com.bd/wp-content/uploads/2019/06/sajekvalley.jpg",
     desc: "Experience the clouds and peaceful tribal lifestyle.",
   },
   {
     title: "Saint Martin",
-    img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd0Y_QEBn06fF5zuwDICaP6QZFGzYNAz2Bjw&s",
     desc: "Tropical island with crystal-blue water.",
   },
 ];
