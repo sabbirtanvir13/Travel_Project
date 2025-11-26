@@ -6,7 +6,7 @@ const Navbar = () => {
     <>
       <li><Link className='text-black' href="/">Home</Link></li>
       <li><Link className='text-black'  href="/packages">Packages</Link></li>
-      <li><Link className='text-black'  href="/destinations">Destinations</Link></li>
+     
       <li><Link className='text-black'  href="/about">About</Link></li>
       <li><Link className='text-black'  href="/contact">Contact</Link></li>
     </>
