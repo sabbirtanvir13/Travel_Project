@@ -20,7 +20,8 @@ Dynamic Route Pages (e.g., /packages/[id])
 
 📦 Installation & Setup
 1️⃣ Clone the project
-git clone https://github.com/your-username/travelgo.git
+[git clone https://github.com/your-username/travelgo.git](https://github.com/sabbirtanvir13/Travel_Project.git)
+
 cd travelgo
 
 2️⃣ Install dependencies
