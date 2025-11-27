@@ -48,7 +48,6 @@ export function AuthProvider({ children }) {
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 
-// ✅ Custom Hook for easier use in Client Components
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) {

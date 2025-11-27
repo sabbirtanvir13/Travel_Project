@@ -21,7 +21,7 @@ const trendingDestinations = [
 export default function TrendingDestinations() {
   return (
     <section className="max-w-7xl mx-auto px-6 py-16 space-y-12">
-      <h2 className="text-4xl font-bold text-center mb-8">🔥 Trending Destinations</h2>
+      <h2 className="text-4xl font-bold text-center mb-8"> Trending Destinations</h2>
 
       <div className="space-y-8">
         {trendingDestinations.map((dest, i) => (

@@ -1,24 +1,24 @@
+
+
 "use client";
 
-import { useAuth } from "@/context/AuthContext";
+import { useContext, useEffect } from "react";
+import { AuthContext } from "./AuthContext";
 import { useRouter } from "next/navigation";
 
 export default function PrivateRoute({ children }) {
-  const { user, loading } = useAuth();
+  const { user, loading } = useContext(AuthContext);
   const router = useRouter();
 
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center min-h-screen">
-        <span className="loading loading-spinner text-success"></span>
-      </div>
-    );
-  }
+  useEffect(() => {
+    if (!loading && !user) {
+      router.replace("/login"); // ✔ safe inside useEffect
+    }
+  }, [loading, user, router]);
 
-  if (!user) {
-    router.push("/login");
-    return null;
-  }
+  if (loading) return <p>Loading...</p>;
+
+  if (!user) return null; // block render until redirect
 
   return children;
 }

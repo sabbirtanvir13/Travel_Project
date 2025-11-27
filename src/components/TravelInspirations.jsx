@@ -18,7 +18,7 @@ const inspirations = [
 export default function TravelInspirations() {
   return (
     <section className="max-w-7xl mx-auto px-6 py-16">
-      <h2 className="text-3xl font-bold mb-8 text-center">🌍 Travel Inspirations</h2>
+      <h2 className="text-3xl font-bold mb-8 text-center"> Travel Inspirations</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
         {inspirations.map((insp, i) => (

@@ -23,14 +23,13 @@ const LatestPackages = () => {
             key={i}
             className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition border"
           >
-            {/* Image */}
+
             <img
               src={pkg.img}
               alt={pkg.title}
               className="w-full h-48 object-cover"
             />
 
-            {/* Content */}
             <div className="p-5">
               <h2 className="text-xl font-bold text-black mb-2">{pkg.title}</h2>
 
@@ -42,9 +41,9 @@ const LatestPackages = () => {
 
           
               <div className="text-gray-500 text-sm mb-3 space-y-1">
-                <p>📅 <span className="font-medium">{new Date(pkg.date).toLocaleDateString()}</span></p>
-                <p>⏳ Duration: {pkg.meta?.duration}</p>
-                <p>⚡ Priority: {pkg.priority}</p>
+                <p>Date :<span className="font-medium">{new Date(pkg.date).toLocaleDateString()}</span></p>
+                <p> Duration: {pkg.meta?.duration}</p>
+                <p> Priority: {pkg.priority}</p>
               </div>
 
               <p className="text-lg font-bold text-blue-600 mb-4">
@@ -52,7 +51,7 @@ const LatestPackages = () => {
               </p>
 
              <Link
-                   href={`/travel/${pkg._id}`}  // এখানে _id দিয়ে route বানানো হচ্ছে
+                   href={`/travel/${pkg._id}`} 
                    className="btn btn-sm mt-2 bg-blue-500 hover:bg-blue-600 text-white"
                  >
                    View Details
@@ -64,7 +63,11 @@ const LatestPackages = () => {
 
 
       <div className="flex justify-center mt-10">
-        <button className="btn btn-primary btn-md">All Packages</button>
+
+     
+          <Link href='/packages'>
+             <button className="btn btn-primary btn-md">All Packages</button>
+          </Link>
       </div>
     </section>
   );

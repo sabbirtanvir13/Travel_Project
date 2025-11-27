@@ -12,7 +12,7 @@ const Footer = () => {
 
           {/* Brand / About */}
           <div className="max-w-sm">
-            <h2 className="text-xl font-semibold text-white">YourBrand</h2>
+            <h2 className="text-xl font-semibold text-white">TravelGo</h2>
             <p className="mt-3 text-sm">
               Providing quality services with a focus on modern design,
               reliability, and user experience.
@@ -25,7 +25,7 @@ const Footer = () => {
               <h3 className="font-semibold text-white mb-3">Company</h3>
               <ul className="space-y-2">
                 <li><Link href="/about" className="hover:text-white">About</Link></li>
-                <li><Link href="/services" className="hover:text-white">Services</Link></li>
+                <li><Link href="/packages" className="hover:text-white">Packages</Link></li>
                 <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
               </ul>
             </div>
