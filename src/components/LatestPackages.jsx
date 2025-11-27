@@ -7,7 +7,7 @@ const LatestPackages = () => {
   const [packages, setPackages] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/latest-packages")
+    fetch("https://travelbackend-three.vercel.app/latest-packages")
       .then((res) => res.json())
       .then((data) => setPackages(data))
       .catch((err) => console.error(err));
@@ -42,7 +42,7 @@ const LatestPackages = () => {
           
               <div className="text-gray-500 text-sm mb-3 space-y-1">
                 <p>Date :<span className="font-medium">{new Date(pkg.date).toLocaleDateString()}</span></p>
-                <p> Duration: {pkg.meta?.duration}</p>
+                <p> location: {pkg.location}</p>
                 <p> Priority: {pkg.priority}</p>
               </div>
 

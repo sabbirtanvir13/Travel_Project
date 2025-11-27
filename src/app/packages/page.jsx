@@ -1,56 +1,4 @@
-// export default async function PackagesPage() {
-//   const res = await fetch("http://localhost:5000/Packages")
 
-//   const data = await res.json();
-
-//   return (
-//     <div className="p-10">
-//       <h1 className="text-3xl font-bold mb-8 text-center">All Travel Packages</h1>
-
-//       {/* Grid Layout */}
-//       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-//         {data.map((pkg, i) => (
-//           <div
-//             key={i}
-//             className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition border"
-//           >
-//             {/* Image */}
-//             <img
-//               src={pkg.img}
-//               alt={pkg.title}
-//               className="w-full h-48 object-cover"
-//             />
-
-//             {/* Content */}
-//             <div className="p-5">
-//               <h2 className="text-xl text-black font-bold mb-1">{pkg.title}</h2>
-
-//               <p className="text-black text-sm line-clamp-2 mb-3">
-//                 {pkg.shortDescription}
-//               </p>
-
-//               {/* Meta Data */}
-//               <div className="text-gray-500 text-sm mb-3">
-//                 <p>📅 <span className="font-medium">{pkg.date}</span></p>
-//                 <p>⏳ {pkg.meta.duration}</p>
-//                 <p>⚡ Priority: {pkg.priority}</p>
-//               </div>
-
-//               <p className="text-lg font-bold text-blue-600 mb-4">
-//                 {pkg.price}
-//               </p>
-
-//               {/* Button */}
-//               <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
-//                 View Details
-//               </button>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
 "use client";
 
 import Link from "next/link";
@@ -62,7 +10,7 @@ export default function PackagesPage() {
   const [category, setCategory] = useState("all");
 
   useEffect(() => {
-    fetch("http://localhost:5000/Packages")
+    fetch("https://travelbackend-three.vercel.app/Packages")
       .then((res) => res.json())
       .then((data) => setPackages(data));
   }, []);
@@ -137,9 +85,9 @@ export default function PackagesPage() {
 
               {/* Meta Data */}
               <div className="text-gray-500 text-sm mb-3">
-                <p>📅 {pkg.date}</p>
-                <p>⏳ {pkg.meta?.duration}</p>
-                <p>⚡ Priority: {pkg.priority}</p>
+                <p>Date : {pkg.date}</p>
+                <p>location : {pkg.location}</p>
+                <p> Priority: {pkg.priority}</p>
               </div>
 
               <p className="text-lg font-bold text-blue-600 mb-4">
@@ -148,7 +96,7 @@ export default function PackagesPage() {
 
                {/* View Details Button */}
      <Link
-        href={`/travel/${pkg._id}`}  // এখানে _id দিয়ে route বানানো হচ্ছে
+        href={`/travel/${pkg._id}`}  
         className="btn btn-sm mt-2 bg-blue-500 hover:bg-blue-600 text-white"
       >
         View Details

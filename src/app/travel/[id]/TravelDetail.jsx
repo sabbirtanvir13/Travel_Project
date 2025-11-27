@@ -6,7 +6,7 @@ const TravelDetail = ({ id }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/Packages/${id}`)
+    fetch(`https://travelbackend-three.vercel.app/Packages/${id}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.success) setPkg(data.result);
@@ -29,9 +29,9 @@ const TravelDetail = ({ id }) => {
         alt={pkg.title}
         className="w-full h-64 object-cover rounded mb-4"
       />
-      <p className="mb-2 text-black"><strong>Description:</strong> {pkg.description}</p>
+      <p className="mb-2 text-black"><strong>Description:</strong> {pkg.fullDescription}</p>
       <p className="mb-2 text-black"><strong>Price:</strong> ${pkg.price}</p>
-      <p className="mb-2 text-black"><strong>Location:</strong> {pkg.location}</p>
+      <p className="mb-2 text-black"><strong>priority:</strong> {pkg.priority}</p>
     </div>
   );
 };

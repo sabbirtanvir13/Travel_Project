@@ -26,13 +26,15 @@ export default function AddPackagesPage() {
       img: form.img.value,
       date: form.date.value,
       priority: form.priority.value,
+      location: form.location.value,
+
       userName: user.displayName || "Anonymous",
       userEmail: user.email,
       createdAt: new Date(),
     };
 
     try {
-      const res = await fetch("http://localhost:5000/Packages", {
+      const res = await fetch("https://travelbackend-three.vercel.app/Packages", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newPackage),
@@ -63,8 +65,17 @@ export default function AddPackagesPage() {
           <input type="date" name="date" className="input input-bordered w-full text-black bg-white" />
           <input type="text" name="priority" placeholder="Priority (High/Medium/Low)" className="input input-bordered w-full text-black bg-white" />
           <textarea name="shortDescription" placeholder="Short Description" className="textarea textarea-bordered w-full text-black bg-white" required />
-          
-        <label >  <input type="number" name="price" placeholder="Price" className="input input-bordered w-full text-black bg-white" /></label>
+
+           <input type="number" name="price" placeholder="Price" className="input input-bordered w-full text-black bg-white" />
+ 
+          <input
+            type="text"
+            name="location"
+            placeholder="Location"
+            className="input input-bordered w-full text-black bg-white"
+            required
+          />
+
 
           <input type="text" value={user?.displayName || ""} readOnly className="input input-bordered w-full text-black bg-gray-100" />
           <input type="email" value={user?.email || ""} readOnly className="input input-bordered w-full text-black bg-gray-100" />

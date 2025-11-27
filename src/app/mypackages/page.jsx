@@ -209,7 +209,7 @@ export default function MyPackagesTable() {
   const fetchPackages = () => {
     if (!user?.email) return setLoading(false);
     setLoading(true);
-    fetch(`http://localhost:5000/my-packages?email=${user.email}`)
+    fetch(`https://travelbackend-three.vercel.app/my-packages?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => setPackages(data))
       .finally(() => setLoading(false));
@@ -256,7 +256,7 @@ export default function MyPackagesTable() {
     };
 
     try {
-      const res = await fetch(`http://localhost:5000/Packages/${updateData._id}`, {
+      const res = await fetch(`https://travelbackend-three.vercel.app//Packages/${updateData._id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedPackage),

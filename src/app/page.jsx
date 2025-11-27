@@ -1,17 +1,3 @@
-// import FeaturedPackages from "@/components/FeaturedPackages";
-// import Hero from "@/components/Hero";
-// import Image from "next/image";
-
-// export default function Home() {
-//   return (
-//     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-//     <Hero></Hero>
-//    <div className="mt-16">
-//     <FeaturedPackages />
-//   </div>
-//     </div>
-//   );
-// }
 
 
 "use client";

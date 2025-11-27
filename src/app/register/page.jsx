@@ -51,7 +51,7 @@ export default function Register() {
         showConfirmButton: false,
       });
 
-      router.push("/"); // redirect to homepage
+      router.push("/"); 
     } catch (err) {
       Swal.fire({ icon: "error", title: "Google Login Failed", text: err.message });
     }
